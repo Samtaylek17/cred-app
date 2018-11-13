@@ -16,7 +16,7 @@
   display: table;
   position: absolute;
   height: 100vh;
-  background-image: url(../images/ellipse-1.png), url(../images/ellipse-2.png), url(../images/ellipse-3.png), url(../images/ellipse-4.png);
+  background-image: url(../img/ellipse-1.png), url(../img/ellipse-2.png), url(../img/ellipse-3.png), url(../img/ellipse-4.png);
   background-position: top left, bottom left, bottom right, top right;
   background-repeat: no-repeat; }
   .onboarding h1, .onboarding h2, .onboarding h3, .onboarding h4 {
@@ -59,8 +59,8 @@
     color: #444444;
     -webkit-transition: border-color ease-in-out .30s, -webkit-box-shadow ease-in-out .30s;
     -o-transition: border-color ease-in-out .30s, box-shadow ease-in-out .30s;
-    transition: border-color ease-in-out .30s, box-shadow ease-in-out .30s; }
+    transition: border-color ease-in-out .30s, -webkit-box-shadow ease-in-out .30s;
+    transition: border-color ease-in-out .30s, box-shadow ease-in-out .30s;
+    transition: border-color ease-in-out .30s, box-shadow ease-in-out .30s, -webkit-box-shadow ease-in-out .30s; }
   .onboarding input[type=text]:focus, .onboarding input[type=password]:focus {
     border: 1px solid #000000; }
-
-/*# sourceMappingURL=components.css.map */

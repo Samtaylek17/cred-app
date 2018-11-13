@@ -1,0 +1,94 @@
+$primary-color: #9D0F3E;
+$primary-color-light: #AE335F;
+$secondary-color: #75557E;
+$secondary-color-yellow: #E6941D;
+$secondary-color-blue: #2F89FC;
+$grey-primary: rgba(0, 0, 0, 0.8);
+$grey-secondary: rgba(0, 0, 0, 0.6);
+$grey-tertiary: rgba(0, 0, 0, 0.35);
+$white: #FFFFFF;
+$black: #000000;
+$grey-text1: #444444;
+$grey-text2: #2B303A;
+
+ul {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style: none;
+	}
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.input-ctn {
+  margin-bottom: 25px;
+
+  label {
+    font-size: em(14);
+    margin-bottom: 8px;
+    color: #7c7c7c;
+  }
+}
+
+
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+  /* Rectangle 7: */
+  border: 1px solid #C4C4D0;
+  border-radius: 3px;
+  box-shadow: none;
+  display: block;
+  width: 100%;
+  color: #444;
+  padding: 12px 15px;
+  height: initial;
+  font-size: em(14);
+  -webkit-transition: border-color ease-in-out .30s, -webkit-box-shadow ease-in-out .30s;
+  -o-transition: border-color ease-in-out .30s, box-shadow ease-in-out .30s;
+  transition: border-color ease-in-out .30s, box-shadow ease-in-out .30s;
+
+  &:focus {
+    border: 1px solid #2B303A;
+    outline: none;
+    box-shadow: none;
+  }
+
+  &.error {
+    
+  }
+}
+
+input:disabled {
+  background-color: #fbfbfb;
+  color: #222;
+}
+
+textarea {
+  
+}
+
+select {
+  // outline: none;
+  // border-radius: 3px;
+  // border: 2px solid #DFDFDF;
+  // font-family: $regular;
+  // font-size: em(14);
+  // color: #4d4d4d;
+  // padding-top: 10px;
+  // padding-bottom: 11px;
+  // height: initial;
+}

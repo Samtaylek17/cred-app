@@ -10,7 +10,7 @@
 8. Security
 ...............To be separated into different components later.........
 **********************************************/
-@import "./sass/variables";
+@import "./sass/variables.scss";
 @import "./font.css";
 
 .onboarding{
@@ -23,10 +23,10 @@
   height: 100vh;
   //background-size: 200px;
   background-image:
-    url(../images/ellipse-1.png),
-    url(../images/ellipse-2.png),
-    url(../images/ellipse-3.png),
-    url(../images/ellipse-4.png);
+    url(../img/ellipse-1.png),
+    url(../img/ellipse-2.png),
+    url(../img/ellipse-3.png),
+    url(../img/ellipse-4.png);
   background-position:
     top left,
     bottom left,

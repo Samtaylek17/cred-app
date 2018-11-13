@@ -1,0 +1,73 @@
+@import 'fonts';
+@import 'mixins';
+@import 'button';
+
+
+
+html, body {
+	height: 100%;
+}
+
+body {
+  font-family: $regular;
+  color: #2B303A;
+  background: #fff;
+}
+
+
+.onboarding{
+  width: 100%;
+  display: table;
+  position: absolute;
+  height: 100vh;
+  //background-size: 200px;
+
+  background-image:
+    url(../img/ellipse-1.svg),
+    url(../img/ellipse-2.svg),
+    url(../img/ellipse-3.svg),
+    url(../img/ellipse-4.svg);
+  	background-position: top left, bottom left, bottom right, top right;
+  	background-repeat: no-repeat;
+
+  .middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .inner{
+    width: 100%;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 0 20px;
+
+    h3{
+      margin-top: 40px;
+
+      span {
+      	display: block;
+      	background: $primary-color;
+      	width: 40px;
+        height: 3px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  p {
+  	color: $grey-text1;
+  	margin-bottom: 0;
+  }
+
+  .onboard-form {
+  	padding-top: 30px;
+  	margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+	.onboarding {
+		background-image: none;
+	}
+}
