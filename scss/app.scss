@@ -43,7 +43,6 @@ body {
 
     h3{
       margin-top: 40px;
-
       span {
       	display: block;
       	background: $primary-color;
@@ -63,6 +62,26 @@ body {
   .onboard-form {
   	padding-top: 30px;
   	margin-bottom: 50px;
+  }
+  .bullet{
+    font-size: em(7);
+    margin: 16px 2px;
+  }
+  .bullet.active{
+    color: $primary-color-light;
+  }
+  .bullet.inactive{
+    color: $grey-tertiary;
+  }
+  .details-container{
+    margin-top: 20px;
+    border-radius: 3px;
+    box-shadow: 2px 1px 3px 3px rgba(0, 0, 0, 0.09);
+    padding: 30px;
+    .label{
+      color: $grey-secondary;
+      font-size: em(14);
+    }
   }
 }
 

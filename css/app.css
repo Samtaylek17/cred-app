@@ -4,31 +4,27 @@
   src: url("../fonts/proximanova/proximanova-light.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova/proximanova-light.woff") format("woff"), url("../fonts/proximanova/proximanova-light.ttf") format("truetype"), url("../fonts/proximanova/proximanova-light.svg#proxima_novalight") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'proxima_novaregular';
   src: url("../fonts/proximanova/proximanova-regular.eot");
   src: url("../fonts/proximanova/proximanova-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova/proximanova-regular.woff") format("woff"), url("../fonts/proximanova/proximanova-regular.ttf") format("truetype"), url("../fonts/proximanova/proximanova-regular.svg#proxima_nova_rgregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'proxima_novasemibold';
   src: url("../fonts/proximanova/proximanova-semibold.eot");
   src: url("../fonts/proximanova/proximanova-semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova/proximanova-semibold.woff") format("woff"), url("../fonts/proximanova/proximanova-semibold.ttf") format("truetype"), url("../fonts/proximanova/proximanova-semibold.svg#proxima_novasemibold") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'proxima_novabold';
   src: url("../fonts/proximanova/proximanova-bold.eot");
   src: url("../fonts/proximanova/proximanova-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova/proximanova-bold.woff") format("woff"), url("../fonts/proximanova/proximanova-bold.ttf") format("truetype"), url("../fonts/proximanova/proximanova-bold.svg#proxima_nova_rgbold") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 body {
   font-family: "proxima_novaregular", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5 {
@@ -76,11 +72,10 @@ a {
     margin-bottom: 8px;
     color: #7c7c7c; }
 
-[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], select, textarea {
   /* Rectangle 7: */
   border: 1px solid #C4C4D0;
   border-radius: 3px;
-  -webkit-box-shadow: none;
   box-shadow: none;
   display: block;
   width: 100%;
@@ -90,18 +85,24 @@ a {
   font-size: 0.875em;
   -webkit-transition: border-color ease-in-out .30s, -webkit-box-shadow ease-in-out .30s;
   -o-transition: border-color ease-in-out .30s, box-shadow ease-in-out .30s;
-  transition: border-color ease-in-out .30s, -webkit-box-shadow ease-in-out .30s;
-  transition: border-color ease-in-out .30s, box-shadow ease-in-out .30s;
-  transition: border-color ease-in-out .30s, box-shadow ease-in-out .30s, -webkit-box-shadow ease-in-out .30s; }
-  [type='text']:focus, [type='password']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='week']:focus, [type='email']:focus, [type='number']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='url']:focus, [type='color']:focus, textarea:focus {
+  transition: border-color ease-in-out .30s, box-shadow ease-in-out .30s; }
+  [type='text']:focus, [type='password']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='week']:focus, [type='email']:focus, [type='number']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='url']:focus, [type='color']:focus, select:focus, textarea:focus {
     border: 1px solid #2B303A;
     outline: none;
-    -webkit-box-shadow: none;
     box-shadow: none; }
+  [type='text'].error, [type='password'].error, [type='date'].error, [type='datetime'].error, [type='datetime-local'].error, [type='month'].error, [type='week'].error, [type='email'].error, [type='number'].error, [type='search'].error, [type='tel'].error, [type='time'].error, [type='url'].error, [type='color'].error, select.error, textarea.error {
+    border: 1px solid #FF0000; }
 
 input:disabled {
   background-color: #fbfbfb;
   color: #222; }
+
+select {
+  height: 45px;
+  background: #FFFFFF; }
+
+.datepicker--day-name {
+  color: #75557E !important; }
 
 a {
   color: #9D0F3E;
@@ -122,8 +123,12 @@ a:hover {
   line-height: 50px;
   height: 50px;
   border-radius: 3px;
-  -webkit-box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+  text-align: center;
   box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25); }
+
+.btn-alat:hover {
+  color: #FFFFFF;
+  text-decoration: none; }
 
 html, body {
   height: 100%; }
@@ -164,7 +169,24 @@ body {
   .onboarding .onboard-form {
     padding-top: 30px;
     margin-bottom: 50px; }
+  .onboarding .bullet {
+    font-size: 0.4375em;
+    margin: 16px 2px; }
+  .onboarding .bullet.active {
+    color: #AE335F; }
+  .onboarding .bullet.inactive {
+    color: rgba(0, 0, 0, 0.35); }
+  .onboarding .details-container {
+    margin-top: 20px;
+    border-radius: 3px;
+    box-shadow: 2px 1px 3px 3px rgba(0, 0, 0, 0.09);
+    padding: 30px; }
+    .onboarding .details-container .label {
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 0.875em; }
 
 @media screen and (max-width: 640px) {
   .onboarding {
     background-image: none; } }
+
+/*# sourceMappingURL=app.css.map */

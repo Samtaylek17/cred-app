@@ -46,7 +46,7 @@ a {
 }
 
 
-[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], select, textarea {
   /* Rectangle 7: */
   border: 1px solid #C4C4D0;
   border-radius: 3px;
@@ -68,7 +68,7 @@ a {
   }
 
   &.error {
-    
+    border: 1px solid #FF0000;
   }
 }
 
@@ -82,13 +82,17 @@ textarea {
 }
 
 select {
-  // outline: none;
-  // border-radius: 3px;
-  // border: 2px solid #DFDFDF;
-  // font-family: $regular;
-  // font-size: em(14);
-  // color: #4d4d4d;
-  // padding-top: 10px;
-  // padding-bottom: 11px;
-  // height: initial;
+   //outline: none;
+   //border-radius: 3px;
+   //border: 2px solid #DFDFDF;
+   //font-family: $regular;
+   //font-size: em(14);
+   //color: #4d4d4d;
+   //padding-top: 10px;
+   //padding-bottom: 11px;
+   height: 45px;
+   background: $white;
+}
+.datepicker--day-name{
+  color: $secondary-color !important;
 }
