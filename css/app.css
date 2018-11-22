@@ -70,7 +70,7 @@ a {
   height: 0; }
 
 .input-ctn {
-  margin-bottom: 25px; }
+  margin-bottom: 20px; }
   .input-ctn label {
     font-size: 0.875em;
     margin-bottom: 8px;
@@ -105,12 +105,38 @@ input:disabled {
   background-color: #fbfbfb;
   color: #222; }
 
+.form-error input {
+  border: 1px solid #9D0F3E; }
+
+.form-error label {
+  color: #9D0F3E; }
+
+.form-error span.error {
+  display: block;
+  color: #9D0F3E;
+  font-size: 0.875em;
+  margin-top: 10px; }
+
 select {
   height: 45px;
   background: #FFFFFF; }
 
 .datepicker--day-name {
   color: #75557E !important; }
+
+.info-label {
+  border: 1px solid #ccc;
+  padding: 8px 15px;
+  font-size: 0.875em;
+  border-radius: 3px;
+  color: #444;
+  margin-bottom: 30px; }
+  .info-label.error {
+    color: #9D0F3E;
+    border: 1px solid #C87291; }
+  .info-label.success {
+    color: #169A62;
+    border: 1px solid #169A62; }
 
 .selectize-control.single .selectize-input {
   -webkit-box-shadow: none;

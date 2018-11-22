@@ -12,11 +12,13 @@
     <!--Bootstrap-->
     <link href="css/bootstrap.css" rel="stylesheet">
 
-    <!-- font-awesome.css -->
+   <!-- font-awesome.css -->
     <link href="css/font-awesome/font-awesome.css" rel="stylesheet">
+    <link href="css/selectize.default.css" rel="stylesheet">
 
     <!--JQuery-->
     <script src="js/jquery.min.js"></script>
+    <script src="js/standalone/selectize.min.js"></script>
 
     <!-- User Defined Style -->
     <link href="css/app.css" rel="stylesheet">
@@ -52,6 +54,10 @@
             <div class="row">
                 <div class="col-12">
                     <form class="onboard-form">
+                        <div class="info-label error">
+                            An error occured while processing your request
+                        </div>
+
                         <div class="input-ctn">
                             <label>Security Question</label>
                             <select>
@@ -60,9 +66,10 @@
                                 <option>What is your grandfather's name</option>
                             </select>
                         </div>
-                        <div class="input-ctn">
+                        <div class="input-ctn form-error">
                             <label>Answer</label>
                             <input type="text" />
+                            <span class="error">Your answer was incorrect</span>
                         </div>
 
                         <p>
@@ -75,5 +82,9 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $('select').selectize();
+</script>
 </body>
 </html>

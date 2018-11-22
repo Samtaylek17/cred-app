@@ -36,7 +36,7 @@ a {
 }
 
 .input-ctn {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 
   label {
     font-size: em(14);
@@ -81,6 +81,23 @@ textarea {
   
 }
 
+.form-error {
+  input {
+    border: 1px solid $primary-color;
+  }
+
+  label {
+    color: $primary-color;
+  }
+
+  span.error {
+    display: block;
+    color: $primary-color;
+    font-size: em(14);
+    margin-top: 10px;
+  }
+}
+
 select {
    //outline: none;
    //border-radius: 3px;
@@ -93,8 +110,28 @@ select {
    height: 45px;
    background: $white;
 }
+
 .datepicker--day-name{
   color: $secondary-color !important;
+}
+
+.info-label {
+   border: 1px solid #ccc;
+   padding: 8px 15px;
+   font-size: em(14);
+   border-radius: 3px;
+   color: #444;
+   margin-bottom: 30px;
+
+   &.error {
+    color: $primary-color;
+    border: 1px solid #C87291;
+   }
+
+   &.success {
+    color: #169A62;
+    border: 1px solid #169A62;
+   }
 }
 
 
