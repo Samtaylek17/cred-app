@@ -64,7 +64,7 @@ body {
   	margin-bottom: 50px;
   }
   .bullet{
-    font-size: em(7);
+    font-size: em(10);
     margin: 16px 2px;
   }
   .bullet.active{
@@ -83,6 +83,11 @@ body {
       font-size: em(14);
     }
   }
+}
+
+.pw-hint {
+  font-size: em(14);
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 640px) {

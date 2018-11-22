@@ -96,3 +96,40 @@ select {
 .datepicker--day-name{
   color: $secondary-color !important;
 }
+
+
+
+// Selectize Overrides
+
+.selectize-control.single .selectize-input {
+  box-shadow: none;
+  background: none;
+  background-image: none;
+  background-repeat: none;
+}
+
+.selectize-input {
+  padding: 12px 15px;
+  border: 1px solid #C4C4D0;
+  border-color: #C4C4D0 !important;
+}
+
+.selectize-dropdown .option, .selectize-dropdown .optgroup-header {
+    padding: 10px 15px;
+}
+
+.selectize-dropdown {
+  box-shadow: none;
+  border: 1px solid #C4C4D0;
+  border-top: none;
+}
+
+
+
+
+
+
+
+
+
+
