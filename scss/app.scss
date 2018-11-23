@@ -34,7 +34,10 @@ body {
     display: table-cell;
     vertical-align: middle;
   }
-
+  .email-text{
+    color: $primary-color;
+    font-weight: 600;
+  }
   .inner{
     width: 100%;
     max-width: 400px;
@@ -99,6 +102,7 @@ body {
 
     .inner {
       margin: 50px auto;
+      background-image: none;
     }
 	}
 }
