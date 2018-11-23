@@ -248,4 +248,6 @@ body {
 
 @media screen and (max-width: 640px) {
   .onboarding {
-    background-image: none; } }
+    background-image: none; }
+    .onboarding .inner {
+      margin: 50px auto; } }

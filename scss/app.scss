@@ -96,5 +96,9 @@ body {
 @media screen and (max-width: 640px) {
 	.onboarding {
 		background-image: none;
+
+    .inner {
+      margin: 50px auto;
+    }
 	}
 }
