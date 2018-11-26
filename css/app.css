@@ -28,7 +28,7 @@
 
 body {
   font-family: "proxima_novaregular", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5 {
@@ -36,19 +36,19 @@ h1, h2, h3, h4, h5 {
   margin: 0; }
 
 h1 {
-  font-size: 3em; }
+  font-size: 3.42857em; }
 
 h2 {
-  font-size: 2.25em; }
+  font-size: 2.57143em; }
 
 h3 {
-  font-size: 1.5em; }
+  font-size: 1.71429em; }
 
 h4 {
-  font-size: 1.125em; }
+  font-size: 1.28571em; }
 
 h5 {
-  font-size: 0.875em; }
+  font-size: 1em; }
 
 ul {
   margin: 0;
@@ -72,7 +72,7 @@ a {
 .input-ctn {
   margin-bottom: 20px; }
   .input-ctn label {
-    font-size: 0.875em;
+    font-size: 1em;
     margin-bottom: 8px;
     color: #7c7c7c; }
 
@@ -87,7 +87,7 @@ a {
   color: #444;
   padding: 12px 15px;
   height: initial;
-  font-size: 0.875em;
+  font-size: 1em;
   -webkit-transition: border-color ease-in-out .30s, -webkit-box-shadow ease-in-out .30s;
   -o-transition: border-color ease-in-out .30s, box-shadow ease-in-out .30s;
   transition: border-color ease-in-out .30s, -webkit-box-shadow ease-in-out .30s;
@@ -114,7 +114,7 @@ input:disabled {
 .form-error span.error {
   display: block;
   color: #9D0F3E;
-  font-size: 0.875em;
+  font-size: 1em;
   margin-top: 10px; }
 
 select {
@@ -127,7 +127,7 @@ select {
 .info-label {
   border: 1px solid #ccc;
   padding: 8px 15px;
-  font-size: 0.875em;
+  font-size: 1em;
   border-radius: 3px;
   color: #444;
   margin-bottom: 30px; }
@@ -137,6 +137,9 @@ select {
   .info-label.success {
     color: #169A62;
     border: 1px solid #169A62; }
+
+.bold-text {
+  font-family: "proxima_novasemibold", sans-serif; }
 
 .selectize-control.single .selectize-input {
   -webkit-box-shadow: none;
@@ -174,7 +177,7 @@ a:hover {
   display: block;
   border: none;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1.14286em;
   line-height: 50px;
   height: 50px;
   border-radius: 3px;
@@ -229,7 +232,7 @@ body {
     padding-top: 30px;
     margin-bottom: 50px; }
   .onboarding .bullet {
-    font-size: 0.625em;
+    font-size: 0.71429em;
     margin: 16px 2px; }
   .onboarding .bullet.active {
     color: #AE335F; }
@@ -243,11 +246,34 @@ body {
     padding: 30px; }
     .onboarding .details-container .label {
       color: rgba(0, 0, 0, 0.6);
-      font-size: 0.875em; }
+      font-size: 1em; }
 
 .pw-hint {
-  font-size: 0.875em;
+  font-size: 1em;
   margin-top: 10px; }
+
+.pw-reset-sent h3 {
+  margin-bottom: 20px; }
+
+.pw-reset-sent p {
+  line-height: 1.5; }
+
+.upload-div {
+  margin-bottom: 30px; }
+  .upload-div p {
+    text-align: center;
+    margin-bottom: 10px; }
+
+.dropify-wrapper {
+  background-color: #F9F9F9;
+  border-radius: 3px;
+  border: 1.25px solid #E3E3E4;
+  font-size: 0.85714em;
+  font-family: "proxima_novaregular", sans-serif;
+  line-height: 1.5; }
+  .dropify-wrapper p {
+    color: #8a8a8a;
+    font-weight: "proxima_novaregular", sans-serif !important; }
 
 @media screen and (max-width: 640px) {
   .onboarding {
