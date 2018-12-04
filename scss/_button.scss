@@ -12,15 +12,16 @@ a:hover{
 }
 
 .btn-alat{
-  margin-top: 40px;
+  
   background: $primary-color;
   color: $white;
-  display: block;
+  display: inline-block;
   border: none;
   cursor: pointer;
   font-size: em(16);
-  line-height: 50px;
-  height: 50px;
+  // line-height: 50px;
+  padding: 10px 30px;
+  // min-width: 220px;
   border-radius: 3px;
   text-align: center;
   box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
@@ -29,4 +30,26 @@ a:hover{
 .btn-alat:hover{
   color: $white;
   text-decoration: none;
+}
+
+.onboard-form {
+  .btn-alat {
+    margin-top: 40px;
+  }
+}
+
+.btn-white {
+  background: #fff !important;
+  color: $primary-color;
+  box-shadow: none;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.btn-sm {
+  padding: 5px 20px;
+  font-size: em(14);
+  width: initial;
 }
