@@ -1,4 +1,9 @@
 $(document).ready(function(){
+	$('#nav-icon1').click(function(){
+      $(this).toggleClass('open');
+      $('.hr-nav-header').fadeToggle();
+    });
+
 	$(function() {
 		$('.acct-match').matchHeight();
 	});
@@ -10,4 +15,6 @@ $(document).ready(function(){
 	    slideWidth: 600
 	  });
 	});
+
+    
 });

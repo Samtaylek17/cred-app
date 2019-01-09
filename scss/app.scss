@@ -79,8 +79,9 @@ body {
   .details-container{
     margin-top: 20px;
     border-radius: 3px;
-    box-shadow: 2px 1px 3px 3px rgba(0, 0, 0, 0.09);
+    box-shadow: 2px 1px 3px 3px rgba(0, 0, 0, 0.05);
     padding: 30px;
+    margin-bottom: 30px;
     .label{
       color: $grey-secondary;
       font-size: em(14);
@@ -89,7 +90,7 @@ body {
 }
 
 .pw-hint {
-  font-size: em(14);
+  font-size: em(12);
   margin-top: 10px;
 }
 
