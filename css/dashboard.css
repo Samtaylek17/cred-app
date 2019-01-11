@@ -1604,6 +1604,19 @@ ul.menu-side {
   .resend-otp:hover {
     color: #43063C; }
 
+.pin-links ul li a {
+  display: block;
+  padding: 15px 30px;
+  color: #4d4d4d;
+  text-decoration: none;
+  border-bottom: 1px solid #EEEEEE; }
+  .pin-links ul li a span {
+    float: right; }
+  .pin-links ul li a.active {
+    color: #AB2656; }
+  .pin-links ul li a:hover {
+    color: #AB2656; }
+
 @media screen and (min-width: 1024px) {
   .hr-nav-header {
     display: block !important; } }
