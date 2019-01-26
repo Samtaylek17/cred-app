@@ -39,6 +39,7 @@
 .user-name-circle {
   float: right;
   padding-top: 5px;
+  cursor: pointer;
 
   .circle-image {
     float: right;
@@ -61,6 +62,7 @@
     font-size: em(16);
   }
 }
+
 
 .notification-top {
   float: right;
@@ -213,6 +215,44 @@ ul.menu-side {
   z-index: 10;
 }
 
+.mini-nav {
+  min-width: 150px;
+  background: #fff;
+  margin-top: 54px;
+  z-index: 50;
+  position: absolute;
+  z-index: 50;
+  margin-right: 10px;
+  display: none;
+  top: 0;
+  right: 0;
+  border-radius: 3px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+
+  ul {
+    li {
+      border-bottom: 1px solid #ededed;
+
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      a {
+        padding: 10px 15px;
+        color: #4d4d4d;
+        display: block;
+
+        &:hover {
+          text-decoration: none;
+          color: $primary-color;
+          background: #f8f8f8;
+        }
+      }
+    }
+  }
+}
+
+
 .account-card {
   background: url(../img/account-card.svg);
   background-size: cover;
@@ -292,7 +332,7 @@ ul.menu-side {
   top: 0;
   background: #fff;
   box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
-  z-index: 20;
+  z-index: 8;
   // padding: 15px 0;
 
   ul {
@@ -631,10 +671,21 @@ ul.menu-side {
 
 // Account Section
 .page-title {
-  font-size: em(18);
+  font-size: em(24);
   font-family: $medium;
   margin-bottom: 20px !important;
   color: #444;
+
+  span {
+    float: right;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: -7px;
+
+    a {
+      min-width: initial;
+    }
+  }
 }
 
 .tab-overflow {
@@ -706,6 +757,10 @@ ul.menu-side {
   padding: 30px 100px;
 }
 
+.transfer-ctn-2 {
+  padding: 30px 50px;
+}
+
 
 .add-bene {
   display: block; 
@@ -728,7 +783,7 @@ ul.menu-side {
 .width-400 {
   max-width: 400px;
   margin: 0 auto;
-  text-align: center;
+  // text-align: center;
 }
 
 .width-500 {
@@ -934,6 +989,10 @@ ul.menu-side {
 .pin-links {
   ul {
     li {
+
+      &:hover {
+        background: #f8f8f8;
+      }
       a {
         display: block;
         padding: 15px 30px;
@@ -945,17 +1004,762 @@ ul.menu-side {
           float: right;
         }
 
+        i {
+          color: #c4c4c4;
+        }
+
         &.active {
           color: $primary-color;
+
+          & i  {
+            color: $primary-color;
+          }
+
         }
 
         &:hover {
+          color: $primary-color;
+
+          & i  {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// Cards
+
+.card-img-ctn {
+
+  img {
+    max-width: 100%;
+    position: relative;
+  }
+
+  span.bg {
+    width: 100%;
+    height: 100%;
+    // background: #000;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    border-radius: 8px;
+    opacity: 0.18;
+  }
+
+  position: relative;
+  max-width: 320px;
+  height: 174px;
+  width: 100%;
+  margin: 0 auto 40px;
+}
+
+.card-pan {
+  position: absolute;
+  bottom: 50px;
+  color: #fff;
+  margin-left: 25px;
+  z-index: 1;
+
+  span {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: em(16);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    font-family: $medium;
+  }
+}
+
+.card-name {
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  margin-left: 25px;
+  z-index: 1;
+
+  span {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: em(16);
+    font-family: $medium;
+  }
+}
+
+.form-sub-head {
+  font-size: em(14);
+  font-family: $medium;
+  color: #444;
+  text-align: left;
+}
+
+.channel-ctn {
+  padding: 15px 30px;
+  background: #f8f8f8;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(204, 204, 204, 0.2);
+
+  .pretty {
+    width: 27%;
+  }
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  ul {
+    li {
+      display: inline-block;
+      width: 30%;
+    }
+  }
+}
+
+.lock-card-toggle {
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 40px;
+
+  span {
+    float: left;
+  }
+}
+
+
+.abroad {
+  display: none;
+}
+
+
+.active-channel {
+  color: #57084E;
+  font-size: em(16);
+}
+
+.card-selection {
+  margin-bottom: 40px;
+}
+
+.card-selector {
+  // border: 2px solid rgba(171, 38, 86, 0.76);
+  margin-bottom: 60px;
+  padding: 7px;
+  border-radius: 20px;
+  .bx-wrapper .bx-prev {
+    left: -49px;
+  }
+
+  .bx-wrapper .bx-next {
+    right: -49px;
+  }
+
+  .bx-pager {
+    display: block;
+  }
+}
+
+
+.purple-text {
+  color: $purple;
+}
+
+
+
+
+// Virtual Card
+.dollar-card {
+  padding: 20px 20px;
+}
+
+.logo-balance {
+  p {
+    color: #fff;
+    float: left;
+    margin-bottom: 0;
+    font-size: em(16);
+  }
+
+  img {
+    float: left;
+  }
+}
+
+.dark-card-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.12);
+  position: absolute;
+  border-radius: 8px;
+  z-index: 3;
+}
+
+
+.v-card-ctn {
+  width: 320px;
+  // height: 174px;
+  border-radius: 8px;
+  position: relative;
+  margin: 0 auto;
+  // background-image: linear-gradient(122deg, #009688, #004e47 20%, #000000);
+  background: url(../img/virtual-card-bg.svg);
+  box-shadow: 0 0.5px 1.5px 0 rgba(0, 0, 0, 0.35);
+}
+
+// .logo-water-mark {
+//   position: absolute;
+//   top: 45px;
+
+// }
+
+.v-card-details {
+  padding: 20px;
+}
+
+.v-card-no {
+  margin-top: 25px;
+  // width: 24.5px;
+  // height: 10.5px;
+  font-family: $regular;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  text-shadow: 0 0.5px 0.5px rgba(0, 0, 0, 0.45);
+
+  span {
+    margin-right: 10px;
+  }
+}
+
+.v-exp-date {
+  margin-top: 15px;
+}
+.v-date {
+  p {
+    margin-bottom: 0;
+    color:  rgba(211, 221, 229, 0.66);
+    font-family: $regular;
+    font-size: 10px;
+
+    span {
+      font-family: $regular;
+      color: #fff;
+      font-size: 14px;
+      margin-left: 5px;
+    }
+  }
+}
+
+.v-type {
+  color: rgba(255, 255, 255, 0.77);
+  margin: 0;
+  font-family: $regular;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  p {
+    margin: 0;
+    margin-right: 20px;
+  }
+  p {
+    margin-bottom: 0;
+    color:  rgba(211, 221, 229, 0.66);
+    font-family: $regular;
+    font-size: 12px;
+
+    span {
+      font-family: $regular;
+      color: #fff;
+      font-size: 14px;
+      margin-left: 5px;
+    }
+  }
+}
+
+.v-number-type {
+  margin-top: 15px;
+
+  .phone-number {
+    font-family: $regular;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+    text-shadow: 0 0.5px 0.5px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.dollar-conv {
+  text-align: center;
+  color: $purple;
+  font-size: em(16);
+  margin-bottom: 20px;
+
+  &-top {
+    margin-top: 30px;
+    margin-bottom: 0;
+    text-align: center;
+    color: $purple;
+    font-size: em(16);
+  }
+}
+
+
+// Statement Pagination
+.history-paginate {
+  padding-top: 20px;
+  float: right;
+  
+  ul {
+    li{
+      display: inline-block;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        padding: 10px 15px;
+        background: #ededed;
+        color: #666;
+        border-radius: 4px;
+
+        &:hover {
+          text-decoration: none;
+          background: #dfdfdf;
+        }
+
+        display: inline-block;
+        &.active {
+          background: $primary-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.dl-card-details {
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  p {
+    font-size: 12px;
+    margin-bottom: 30px;
+    color: #666;
+
+    span {
+      font-size: 16px;
+      display: block;
+      margin-top: 5px;
+      color: #4d4d4d;
+    }
+  }
+}
+
+
+.vcard-lock {
+  @extend .lock-card-toggle;
+  margin-top: 0;
+  margin-bottom: 40px;
+} 
+
+.vcard-control {
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+
+  .btn-alat {
+    min-width: inherit;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+.active-card {
+  display: block;
+  text-align: center;
+  border: 1px solid #dddddd;
+  padding: 10px 10px 8px;
+  width: 180px;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: -20px;
+  margin-bottom: 30px;
+
+  i {
+    margin-right: 10px;
+  }
+}
+
+
+.airtime-card {
+  padding: 25px 20px;
+  cursor: pointer;
+
+  &:hover {
+
+  } 
+
+  .network-img {
+    float: left;
+    width: 20%;
+  }
+
+  .all-info {
+    width: 80%;
+    float: left;
+    p {
+      margin-bottom: 8px;
+      span {
+        float: right;
+        font-family: $medium;
+        color: $primary-color;
+      }
+    }
+  }
+
+  .line-price {
+    color: #717171;
+    span {
+      float: right;
+    }
+  }
+
+  .num-ref {
+    font-family: $medium;
+    font-size: em(16);
+    margin-bottom: 0 !important;
+    span {
+      float: right;
+      color: #b1b1b1;
+
+      a {
+        display: inline-block;
+        padding: 0 10px;
+        color: #b1b1b1;
+      }
+    }
+  }
+}
+
+
+.save-purchase {
+  p{
+    float: left;
+  }
+
+  .pretty {
+    float: right;
+  }
+}
+
+.save-purchase-form {
+  display: none;
+}
+
+
+
+
+
+
+// GOALS
+
+.width-960 {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.goal-option {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.goal-title {
+  font-size: em(18);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: #4d4d4d;
+  margin-top: 20px;
+}
+
+.goal-sel {
+  padding:40px 30px;
+  cursor: pointer;
+  transition: all 0.8s ease-in-out;
+  min-height: 281px;
+
+
+  img {
+    margin-bottom: 25px;
+  }
+
+  h4 {
+    text-transform: capitalize;
+    font-size: em(18);
+    margin-bottom: 25px;
+    color: #fff;
+  }
+
+  p {
+    font-size: em(14);
+    color: #fff;
+  }
+
+  &.fixed {
+    background: #9D0F3E;
+    box-sizing: border-box;
+    box-shadow: 3px 8px 24px rgba(255, 255, 255, 0.3221);
+    border-radius: 4.75px;
+  }
+
+  &.flexi {
+    background: #43063C;
+    box-sizing: border-box;
+    box-shadow: 3px 8px 24px rgba(255, 255, 255, 0.3221);
+    border-radius: 4.75px;
+  }
+
+  &.stash {
+    background: #4B2FB8;
+    box-sizing: border-box;
+    box-shadow: 3px 8px 24px rgba(255, 255, 255, 0.3221);
+    border-radius: 4.75px;
+  }
+
+   &:hover {
+    box-shadow: 3px 8px 24px rgba(60, 61, 62, 1);
+    transform: scale(1.04);
+  }
+
+}
+
+.goal-option {
+  a {
+    display: block;
+  }
+}
+
+.sub-form-head {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-size: em(14);
+  color: #666;
+
+  span {
+    color: $primary-color;
+  }
+}
+
+
+
+.gl-left, .gl-right {
+  padding: 30px 30px;
+  float: left;
+  width: 50%;
+  border-bottom: 1px solid #ededed;
+
+  p {
+    font-size: 14px;
+    margin-bottom: 0;
+    color: #929292;
+
+
+    span {
+      display: block;
+      font-size: 16px;
+      color: #4d4d4d;
+      margin-top: 5px;
+      font-family: $medium;
+    }
+  }
+}
+
+.gl-left {
+  border-right: 1px solid #ededed;
+
+  &.last {
+    border-bottom: none;
+  }
+}
+
+.save-card-title {
+  border-bottom: 1px solid #ededed;
+  padding: 15px 20px;
+  p {
+    float: left;
+    width: 70%;
+    text-transform: uppercase;
+    color: $primary-color;
+    font-size: 10px;
+    font-family: $medium;
+    margin-bottom: 0;
+
+    span {
+      display: block;
+      text-transform: capitalize;
+      color: #4d4d4d;
+      margin-top: 2px;
+      color: #666;
+      font-size: 14px;
+    }
+  }
+  
+
+  span.saving-set {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    color: #666;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}
+
+.save-card-details {
+  padding: 30px 20px;
+
+  .bar, .bar-ctn {
+    border-radius: 3px;
+  }
+
+  .saved-goal {
+    p {
+      margin-bottom: 0;
+      font-family: $medium;
+
+      span.tgt-amt {
+        float: right;
+        
+        color: $primary-color;
+      }
+    }
+  }
+
+  .contribution {
+    float: left;
+    margin-right: 30px;
+
+    p {
+      font-family: $medium;
+
+      span {
+        display: block;
+        font-size: 12px;
+        font-family: $regular;
+        color: #878686;
+      }
+    }
+  }
+
+  .bar-ctn {
+    margin-bottom: 8px;
+  }
+
+  .tgt-amt-text {
+    font-size: 12px;
+    color: #878686;
+  }
+}
+
+.gl-breakdown {
+  margin-top: 20px;
+}
+
+.next-pay {
+  margin-top: 10px;
+  background: #F8E8E8;
+  padding: 5px 20px;
+  display: inline-block;
+  border-radius: 50px;
+
+  p {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #CBBEBE;
+
+    span {
+      font-family: $medium;
+      color: #4d4d4d;
+    }
+  }
+}
+
+
+.goal-card {
+  position: relative;
+}
+
+
+.save-actions {
+  position: absolute;
+  display: none;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 6px;
+  background: #fff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f6f6f6;
+  border-radius: 4px;
+
+  ul {
+    min-width: 150px;
+    li {
+      a {
+        display: block;
+        padding: 10px 30px;
+        text-align: left;
+        color: #4d4d4d;
+        border-bottom: 1px solid #f6f6f6;
+
+        &:hover {
+          text-decoration: none;
+          background: #f7f7f7;
           color: $primary-color;
         }
       }
     }
   }
 }
+
+.back-dash {
+  display: inline-block;
+  margin-bottom: 40px;
+  color: $purple;
+}
+
+.interest-estimate {
+  font-family: $medium;
+  color: $purple;
+}
+
+
+
+
+
+
+
 
 
 
@@ -989,7 +1793,7 @@ ul.menu-side {
 
 // Media Queries
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1030px) {
   .hr-nav-header {
     display: block !important;
   }
@@ -1096,6 +1900,19 @@ ul.menu-side {
   .container {
     max-width: 768px;
   }
+
+  .page-title {
+    font-size: em(20);
+
+    span {
+      font-size: 12px;
+
+
+      a {
+        padding: 10px 15px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -1108,6 +1925,10 @@ ul.menu-side {
     .col-sm-8 {
       width: 50%;
     }
+  }
+
+  .page-title {
+    font-size: em(18);
   }
 }
  
@@ -1235,11 +2056,29 @@ ul.menu-side {
     }
   }
 
-  .transfer-ctn {
+  .transfer-ctn, .transfer-ctn-2 {
     padding: 30px 20px;
   }
 
 }
+
+@media screen and (max-width: 380px) {
+  .gl-left, .gl-right {
+    float: none;
+    width: 100%;
+    padding: 20px 20px;
+  }
+
+  .gl-left {
+    border-right: none;
+
+    &.last {
+      border-bottom: 1px solid #ededed;
+    }
+  }
+
+}
+
 
 
 @media screen and (max-width: 360px) {

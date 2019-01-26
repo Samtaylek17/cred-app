@@ -116,6 +116,11 @@ a {
     font-size: 1em;
     margin-bottom: 5px;
     color: #666; }
+  .input-ctn i {
+    position: absolute;
+    top: 15px;
+    opacity: 0.5;
+    right: 25px; }
 
 .info-text {
   font-size: 0.85714em;
@@ -961,7 +966,8 @@ a:hover {
 .border-btn {
   border: 1px solid #AB2656;
   background: none;
-  color: #AB2656; }
+  color: #AB2656;
+  padding: 9px 30px; }
   .border-btn:hover {
     background: #AB2656;
     color: #fff; }
@@ -1000,7 +1006,8 @@ input[type="button"]:disabled {
 
 .user-name-circle {
   float: right;
-  padding-top: 5px; }
+  padding-top: 5px;
+  cursor: pointer; }
   .user-name-circle .circle-image {
     float: right;
     width: 40px;
@@ -1116,6 +1123,33 @@ ul.menu-side {
   top: 0;
   z-index: 10; }
 
+.mini-nav {
+  min-width: 150px;
+  background: #fff;
+  margin-top: 54px;
+  z-index: 50;
+  position: absolute;
+  z-index: 50;
+  margin-right: 10px;
+  display: none;
+  top: 0;
+  right: 0;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05); }
+  .mini-nav ul li {
+    border-bottom: 1px solid #ededed; }
+    .mini-nav ul li:last-child {
+      border-bottom: none; }
+    .mini-nav ul li a {
+      padding: 10px 15px;
+      color: #4d4d4d;
+      display: block; }
+      .mini-nav ul li a:hover {
+        text-decoration: none;
+        color: #AB2656;
+        background: #f8f8f8; }
+
 .account-card {
   background: url(../img/account-card.svg);
   background-size: cover;
@@ -1178,7 +1212,7 @@ ul.menu-side {
   background: #fff;
   -webkit-box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
   box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
-  z-index: 20; }
+  z-index: 8; }
   .hr-nav-header ul li {
     position: relative;
     float: left; }
@@ -1397,10 +1431,17 @@ ul.menu-side {
     margin-bottom: 20px; }
 
 .page-title {
-  font-size: 1.28571em;
+  font-size: 1.71429em;
   font-family: "proxima_novasemibold", sans-serif;
   margin-bottom: 20px !important;
   color: #444; }
+  .page-title span {
+    float: right;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: -7px; }
+    .page-title span a {
+      min-width: initial; }
 
 .tab-overflow {
   overflow: scroll; }
@@ -1447,6 +1488,9 @@ ul.menu-side {
 .transfer-ctn {
   padding: 30px 100px; }
 
+.transfer-ctn-2 {
+  padding: 30px 50px; }
+
 .add-bene {
   display: block;
   text-align: center;
@@ -1463,8 +1507,7 @@ ul.menu-side {
 
 .width-400 {
   max-width: 400px;
-  margin: 0 auto;
-  text-align: center; }
+  margin: 0 auto; }
 
 .width-500 {
   max-width: 500px;
@@ -1604,6 +1647,9 @@ ul.menu-side {
   .resend-otp:hover {
     color: #43063C; }
 
+.pin-links ul li:hover {
+  background: #f8f8f8; }
+
 .pin-links ul li a {
   display: block;
   padding: 15px 30px;
@@ -1612,12 +1658,522 @@ ul.menu-side {
   border-bottom: 1px solid #EEEEEE; }
   .pin-links ul li a span {
     float: right; }
+  .pin-links ul li a i {
+    color: #c4c4c4; }
   .pin-links ul li a.active {
     color: #AB2656; }
+    .pin-links ul li a.active i {
+      color: #AB2656; }
   .pin-links ul li a:hover {
     color: #AB2656; }
+    .pin-links ul li a:hover i {
+      color: #AB2656; }
 
-@media screen and (min-width: 1024px) {
+.card-img-ctn {
+  position: relative;
+  max-width: 320px;
+  height: 174px;
+  width: 100%;
+  margin: 0 auto 40px; }
+  .card-img-ctn img {
+    max-width: 100%;
+    position: relative; }
+  .card-img-ctn span.bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    border-radius: 8px;
+    opacity: 0.18; }
+
+.card-pan {
+  position: absolute;
+  bottom: 50px;
+  color: #fff;
+  margin-left: 25px;
+  z-index: 1; }
+  .card-pan span {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.14286em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    font-family: "proxima_novasemibold", sans-serif; }
+
+.card-name {
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  margin-left: 25px;
+  z-index: 1; }
+  .card-name span {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.14286em;
+    font-family: "proxima_novasemibold", sans-serif; }
+
+.form-sub-head {
+  font-size: 1em;
+  font-family: "proxima_novasemibold", sans-serif;
+  color: #444;
+  text-align: left; }
+
+.channel-ctn {
+  padding: 15px 30px;
+  background: #f8f8f8;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(204, 204, 204, 0.2); }
+  .channel-ctn .pretty {
+    width: 27%; }
+  .channel-ctn input[type="checkbox"] {
+    margin-right: 10px; }
+  .channel-ctn ul li {
+    display: inline-block;
+    width: 30%; }
+
+.lock-card-toggle, .vcard-lock {
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 40px; }
+  .lock-card-toggle span, .vcard-lock span {
+    float: left; }
+
+.abroad {
+  display: none; }
+
+.active-channel {
+  color: #57084E;
+  font-size: 1.14286em; }
+
+.card-selection {
+  margin-bottom: 40px; }
+
+.card-selector {
+  margin-bottom: 60px;
+  padding: 7px;
+  border-radius: 20px; }
+  .card-selector .bx-wrapper .bx-prev {
+    left: -49px; }
+  .card-selector .bx-wrapper .bx-next {
+    right: -49px; }
+  .card-selector .bx-pager {
+    display: block; }
+
+.purple-text {
+  color: #57084E; }
+
+.dollar-card {
+  padding: 20px 20px; }
+
+.logo-balance p {
+  color: #fff;
+  float: left;
+  margin-bottom: 0;
+  font-size: 1.14286em; }
+
+.logo-balance img {
+  float: left; }
+
+.dark-card-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.12);
+  position: absolute;
+  border-radius: 8px;
+  z-index: 3; }
+
+.v-card-ctn {
+  width: 320px;
+  border-radius: 8px;
+  position: relative;
+  margin: 0 auto;
+  background: url(../img/virtual-card-bg.svg);
+  -webkit-box-shadow: 0 0.5px 1.5px 0 rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0.5px 1.5px 0 rgba(0, 0, 0, 0.35); }
+
+.v-card-details {
+  padding: 20px; }
+
+.v-card-no {
+  margin-top: 25px;
+  font-family: "proxima_novaregular", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  text-shadow: 0 0.5px 0.5px rgba(0, 0, 0, 0.45); }
+  .v-card-no span {
+    margin-right: 10px; }
+
+.v-exp-date {
+  margin-top: 15px; }
+
+.v-date p {
+  margin-bottom: 0;
+  color: rgba(211, 221, 229, 0.66);
+  font-family: "proxima_novaregular", sans-serif;
+  font-size: 10px; }
+  .v-date p span {
+    font-family: "proxima_novaregular", sans-serif;
+    color: #fff;
+    font-size: 14px;
+    margin-left: 5px; }
+
+.v-type {
+  color: rgba(255, 255, 255, 0.77);
+  margin: 0;
+  font-family: "proxima_novaregular", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase; }
+  .v-type p {
+    margin: 0;
+    margin-right: 20px; }
+  .v-type p {
+    margin-bottom: 0;
+    color: rgba(211, 221, 229, 0.66);
+    font-family: "proxima_novaregular", sans-serif;
+    font-size: 12px; }
+    .v-type p span {
+      font-family: "proxima_novaregular", sans-serif;
+      color: #fff;
+      font-size: 14px;
+      margin-left: 5px; }
+
+.v-number-type {
+  margin-top: 15px; }
+  .v-number-type .phone-number {
+    font-family: "proxima_novaregular", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+    text-shadow: 0 0.5px 0.5px rgba(0, 0, 0, 0.5); }
+
+.dollar-conv {
+  text-align: center;
+  color: #57084E;
+  font-size: 1.14286em;
+  margin-bottom: 20px; }
+  .dollar-conv-top {
+    margin-top: 30px;
+    margin-bottom: 0;
+    text-align: center;
+    color: #57084E;
+    font-size: 1.14286em; }
+
+.history-paginate {
+  padding-top: 20px;
+  float: right; }
+  .history-paginate ul li {
+    display: inline-block;
+    margin-right: 10px; }
+    .history-paginate ul li:last-child {
+      margin-right: 0; }
+    .history-paginate ul li a {
+      padding: 10px 15px;
+      background: #ededed;
+      color: #666;
+      border-radius: 4px;
+      display: inline-block; }
+      .history-paginate ul li a:hover {
+        text-decoration: none;
+        background: #dfdfdf; }
+      .history-paginate ul li a.active {
+        background: #AB2656;
+        color: #fff; }
+
+.dl-card-details {
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0; }
+  .dl-card-details p {
+    font-size: 12px;
+    margin-bottom: 30px;
+    color: #666; }
+    .dl-card-details p span {
+      font-size: 16px;
+      display: block;
+      margin-top: 5px;
+      color: #4d4d4d; }
+
+.vcard-lock {
+  margin-top: 0;
+  margin-bottom: 40px; }
+
+.vcard-control {
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 50px; }
+  .vcard-control .btn-alat {
+    min-width: inherit;
+    width: 100%;
+    margin-bottom: 20px; }
+
+.active-card {
+  display: block;
+  text-align: center;
+  border: 1px solid #dddddd;
+  padding: 10px 10px 8px;
+  width: 180px;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: -20px;
+  margin-bottom: 30px; }
+  .active-card i {
+    margin-right: 10px; }
+
+.airtime-card {
+  padding: 25px 20px;
+  cursor: pointer; }
+  .airtime-card .network-img {
+    float: left;
+    width: 20%; }
+  .airtime-card .all-info {
+    width: 80%;
+    float: left; }
+    .airtime-card .all-info p {
+      margin-bottom: 8px; }
+      .airtime-card .all-info p span {
+        float: right;
+        font-family: "proxima_novasemibold", sans-serif;
+        color: #AB2656; }
+  .airtime-card .line-price {
+    color: #717171; }
+    .airtime-card .line-price span {
+      float: right; }
+  .airtime-card .num-ref {
+    font-family: "proxima_novasemibold", sans-serif;
+    font-size: 1.14286em;
+    margin-bottom: 0 !important; }
+    .airtime-card .num-ref span {
+      float: right;
+      color: #b1b1b1; }
+      .airtime-card .num-ref span a {
+        display: inline-block;
+        padding: 0 10px;
+        color: #b1b1b1; }
+
+.save-purchase p {
+  float: left; }
+
+.save-purchase .pretty {
+  float: right; }
+
+.save-purchase-form {
+  display: none; }
+
+.width-960 {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto; }
+
+.goal-option a:hover {
+  text-decoration: none; }
+
+.goal-title {
+  font-size: 1.28571em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: #4d4d4d;
+  margin-top: 20px; }
+
+.goal-sel {
+  padding: 40px 30px;
+  cursor: pointer;
+  -webkit-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  min-height: 281px; }
+  .goal-sel img {
+    margin-bottom: 25px; }
+  .goal-sel h4 {
+    text-transform: capitalize;
+    font-size: 1.28571em;
+    margin-bottom: 25px;
+    color: #fff; }
+  .goal-sel p {
+    font-size: 1em;
+    color: #fff; }
+  .goal-sel.fixed {
+    background: #9D0F3E;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 3px 8px 24px rgba(255, 255, 255, 0.3221);
+    box-shadow: 3px 8px 24px rgba(255, 255, 255, 0.3221);
+    border-radius: 4.75px; }
+  .goal-sel.flexi {
+    background: #43063C;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 3px 8px 24px rgba(255, 255, 255, 0.3221);
+    box-shadow: 3px 8px 24px rgba(255, 255, 255, 0.3221);
+    border-radius: 4.75px; }
+  .goal-sel.stash {
+    background: #4B2FB8;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 3px 8px 24px rgba(255, 255, 255, 0.3221);
+    box-shadow: 3px 8px 24px rgba(255, 255, 255, 0.3221);
+    border-radius: 4.75px; }
+  .goal-sel:hover {
+    -webkit-box-shadow: 3px 8px 24px #3c3d3e;
+    box-shadow: 3px 8px 24px #3c3d3e;
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04); }
+
+.goal-option a {
+  display: block; }
+
+.sub-form-head {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-size: 1em;
+  color: #666; }
+  .sub-form-head span {
+    color: #AB2656; }
+
+.gl-left, .gl-right {
+  padding: 30px 30px;
+  float: left;
+  width: 50%;
+  border-bottom: 1px solid #ededed; }
+  .gl-left p, .gl-right p {
+    font-size: 14px;
+    margin-bottom: 0;
+    color: #929292; }
+    .gl-left p span, .gl-right p span {
+      display: block;
+      font-size: 16px;
+      color: #4d4d4d;
+      margin-top: 5px;
+      font-family: "proxima_novasemibold", sans-serif; }
+
+.gl-left {
+  border-right: 1px solid #ededed; }
+  .gl-left.last {
+    border-bottom: none; }
+
+.save-card-title {
+  border-bottom: 1px solid #ededed;
+  padding: 15px 20px; }
+  .save-card-title p {
+    float: left;
+    width: 70%;
+    text-transform: uppercase;
+    color: #AB2656;
+    font-size: 10px;
+    font-family: "proxima_novasemibold", sans-serif;
+    margin-bottom: 0; }
+    .save-card-title p span {
+      display: block;
+      text-transform: capitalize;
+      color: #4d4d4d;
+      margin-top: 2px;
+      color: #666;
+      font-size: 14px; }
+  .save-card-title span.saving-set {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    color: #666;
+    font-size: 18px;
+    cursor: pointer; }
+
+.save-card-details {
+  padding: 30px 20px; }
+  .save-card-details .bar, .save-card-details .bar-ctn {
+    border-radius: 3px; }
+  .save-card-details .saved-goal p {
+    margin-bottom: 0;
+    font-family: "proxima_novasemibold", sans-serif; }
+    .save-card-details .saved-goal p span.tgt-amt {
+      float: right;
+      color: #AB2656; }
+  .save-card-details .contribution {
+    float: left;
+    margin-right: 30px; }
+    .save-card-details .contribution p {
+      font-family: "proxima_novasemibold", sans-serif; }
+      .save-card-details .contribution p span {
+        display: block;
+        font-size: 12px;
+        font-family: "proxima_novaregular", sans-serif;
+        color: #878686; }
+  .save-card-details .bar-ctn {
+    margin-bottom: 8px; }
+  .save-card-details .tgt-amt-text {
+    font-size: 12px;
+    color: #878686; }
+
+.gl-breakdown {
+  margin-top: 20px; }
+
+.next-pay {
+  margin-top: 10px;
+  background: #F8E8E8;
+  padding: 5px 20px;
+  display: inline-block;
+  border-radius: 50px; }
+  .next-pay p {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #CBBEBE; }
+    .next-pay p span {
+      font-family: "proxima_novasemibold", sans-serif;
+      color: #4d4d4d; }
+
+.goal-card {
+  position: relative; }
+
+.save-actions {
+  position: absolute;
+  display: none;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 6px;
+  background: #fff;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f6f6f6;
+  border-radius: 4px; }
+  .save-actions ul {
+    min-width: 150px; }
+    .save-actions ul li a {
+      display: block;
+      padding: 10px 30px;
+      text-align: left;
+      color: #4d4d4d;
+      border-bottom: 1px solid #f6f6f6; }
+      .save-actions ul li a:hover {
+        text-decoration: none;
+        background: #f7f7f7;
+        color: #AB2656; }
+
+.back-dash {
+  display: inline-block;
+  margin-bottom: 40px;
+  color: #57084E; }
+
+.interest-estimate {
+  font-family: "proxima_novasemibold", sans-serif;
+  color: #57084E; }
+
+@media screen and (min-width: 1030px) {
   .hr-nav-header {
     display: block !important; } }
 
@@ -1673,13 +2229,21 @@ ul.menu-side {
 
 @media (max-width: 768px) {
   .container {
-    max-width: 768px; } }
+    max-width: 768px; }
+  .page-title {
+    font-size: 1.42857em; }
+    .page-title span {
+      font-size: 12px; }
+      .page-title span a {
+        padding: 10px 15px; } }
 
 @media screen and (max-width: 600px) {
   .db2-fixed-header .col-sm-4 {
     width: 50%; }
   .db2-fixed-header .col-sm-8 {
-    width: 50%; } }
+    width: 50%; }
+  .page-title {
+    font-size: 1.28571em; } }
 
 @media screen and (max-width: 480px) {
   .hr-nav-header {
@@ -1739,8 +2303,18 @@ ul.menu-side {
     padding-bottom: 10px;
     height: initial;
     position: relative; }
-  .transfer-ctn {
+  .transfer-ctn, .transfer-ctn-2 {
     padding: 30px 20px; } }
+
+@media screen and (max-width: 380px) {
+  .gl-left, .gl-right {
+    float: none;
+    width: 100%;
+    padding: 20px 20px; }
+  .gl-left {
+    border-right: none; }
+    .gl-left.last {
+      border-bottom: 1px solid #ededed; } }
 
 @media screen and (max-width: 360px) {
   .history-list img {

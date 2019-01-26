@@ -4,6 +4,10 @@ $(document).ready(function(){
       $('.hr-nav-header').fadeToggle();
     });
 
+    $('.user-name-circle').click(function(){
+      $('.mini-nav').fadeToggle(300);
+    });
+
 	$(function() {
 		$('.acct-match').matchHeight();
 	});
@@ -11,10 +15,36 @@ $(document).ready(function(){
 	$(function(){
 	  $('.bxslider').bxSlider({
 	    mode: 'horizontal',
-	    captions: true,
 	    slideWidth: 600
 	  });
 	});
+
+    $('.saving-set').click(function(){
+        $(this).next().fadeToggle();
+    })
+
+
+	$(function () {
+        $("#abroad").click(function () {
+            if ($(this).is(":checked")) {
+                $(".abroad").show();
+            } else {
+                $(".abroad").hide();
+            }
+        });
+    });
+
+    $(function () {
+        $("#save-purchase").click(function () {
+            if ($(this).is(":checked")) {
+                $(".save-purchase-form").show();
+            } else {
+                $(".save-purchase-form").hide();
+            }
+        });
+    });
+
+
 
     
 });
