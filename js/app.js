@@ -35,6 +35,16 @@ $(document).ready(function(){
     });
 
     $(function () {
+        $(".lcard-save").click(function () {
+            if ($(this).is(":checked")) {
+                $(".lcard-form").show();
+            } else {
+                $(".lcard-form").hide();
+            }
+        });
+    });
+
+    $(function () {
         $("#save-purchase").click(function () {
             if ($(this).is(":checked")) {
                 $(".save-purchase-form").show();

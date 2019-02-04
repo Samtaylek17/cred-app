@@ -1511,8 +1511,7 @@ ul.menu-side {
 
 .width-500 {
   max-width: 500px;
-  margin: 0 auto;
-  text-align: center; }
+  margin: 0 auto; }
 
 .no-paylink {
   font-size: 1.14286em;
@@ -2172,6 +2171,9 @@ ul.menu-side {
 .interest-estimate {
   font-family: "proxima_novasemibold", sans-serif;
   color: #57084E; }
+
+.lcard-form {
+  display: none; }
 
 @media screen and (min-width: 1030px) {
   .hr-nav-header {
