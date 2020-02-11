@@ -1,0 +1,54 @@
+//@font-face {
+//  font-family: 'Maven Pro  Black';
+//  src: url('./fonts/mavenPro/MavenPro-Black.woff2') format('woff2'),
+//  url('./fonts/mavenPro/MavenPro-Black.woff') format('woff');
+//  font-weight: 900;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: 'Maven Pro';
+//  src: url('./fonts/mavenPro/MavenPro-Regular.woff2') format('woff2'),
+//  url('./fonts/mavenPro/MavenPro-Regular.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: 'Maven Pro Bold';
+//  src: url('./fonts/mavenPro/MavenPro-Bold.woff2') format('woff2'),
+//  url('./fonts/mavenPro/MavenPro-Bold.woff') format('woff');
+//  font-weight: bold;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: 'Maven Pro Medium';
+//  src: url('./fonts/mavenPro/MavenPro-Medium.woff2') format('woff2'),
+//  url('./fonts/mavenPro/MavenPro-Medium.woff') format('woff');
+//  font-weight: 500;
+//  font-style: normal;
+//}
+
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700');
+
+
+.text-primary{
+  color: #5C2682 !important;
+}
+
+// Function to convert from px to em
+$browser-context: 14; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+
+$regular: 'Maven Pro', sans-serif;
+$medium: 'Maven Pro', sans-serif;
+$bold: 'Maven Pro', sans-serif;

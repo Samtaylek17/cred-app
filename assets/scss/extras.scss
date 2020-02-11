@@ -1,0 +1,705 @@
+@import "fonts";
+@import "variable";
+
+.card-header{
+    background: #fff;
+    border-bottom: 1px solid #EBEBEB;
+    color: $primary;
+    font-weight: 500;
+    font-size: 1em;
+}
+.nav-tabs{
+    border-bottom:  1px solid rgba(205, 205, 205, 0.32) !important;
+    position: relative;
+    .action-btn{
+        position: absolute;
+        right: 0;
+    }
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    background-color: transparent;
+}
+
+.profile-tab li a.nav-link.active, .customtab li a.nav-link.active{
+    background-color: transparent;
+}
+.page-header{
+    color: #464655;
+    font-weight: 500;
+    line-height: 30px;
+    font-size: 30px;
+    font-family: 'Maven Pro', sans-serif;
+}
+/* Alerts */
+strong{
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 500;
+}
+.alert{
+    box-sizing: border-box;
+    border-radius: 3px;
+    color: #3F2602;
+}
+.alert-warning{
+    background-color: #FFE097;
+    border: 1px solid #E8A825;
+}
+.alert-info{
+    background: rgba(52, 62, 223, 0.03);
+    border: 1px solid rgba(52, 62, 223, 0.17);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+/* Dashboard */
+.dashboard{
+    .main-account-holder{
+        background: url("../images/dashboard-card.png") no-repeat;
+        background-size: contain;
+        width: 350px;
+        //margin: 0 auto;
+        height: 190px;
+        position: relative;
+        z-index: 3;
+        float: left;
+    }
+    .other-account-holder{
+        background: url("../images/dashboard-other-accounts.png") no-repeat;
+        background-size: contain;
+        width: 350px;
+        //margin: 0 auto;
+        height: 190px;
+        position: relative;
+        z-index: 3;
+        float: left;
+    }
+    .account-labels{
+        //position: absolute;
+        //width: 350px;
+        //top: 30px;
+        .left{
+            top: 30px;
+            position: absolute;
+            left: 25px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .right{
+            top: 30px;
+            position: absolute;
+            right: 25px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+    .balance{
+        position: absolute;
+        top: 70px;
+        left: 25px;
+        color: #fff;
+        font-weight: 500;
+        font-size: em(24);
+        line-height: 21px;
+        letter-spacing: em(0.5);
+    }
+    .account-number-holder{
+        position: absolute;
+        bottom: 30px;
+        left: 25px;
+        background: #FBF6FF;
+        color: $primary;
+        padding: 5px;
+        font-size: 12px;
+        border-radius: 3px;
+    }
+    .cta{
+        bottom: 30px;
+        right: 25px;
+        position: absolute;
+        color: rgba(255, 255, 255, 0.8);
+        .btn-primary{
+            top: 5px;
+            box-shadow: none;
+            padding: 5px;
+            min-width: 100px !important;
+            background: transparent !important;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+
+}
+
+/* Card */
+.cards{
+    .debit-card-holder{
+        background: url("../images/card-bg.png") no-repeat;
+        background-size: contain;
+        width: 80%;
+        margin: 0 auto;
+        height: 190px;
+        position: relative;
+        z-index: 3;
+        .card-pan{
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            color: #fff;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: em(2);
+        }
+        .card-expiry{
+            position: absolute;
+            top: 90px;
+            left: 20px;
+            color: #fff;
+            font-size: 12px;
+            line-height: 14px;
+            span{
+                color: rgba(255, 255, 255, 0.6);
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 10px;
+            }
+        }
+        .card-cvv{
+            position: absolute;
+            top: 90px;
+            left: 150px;
+            color: #fff;
+            font-size: 12px;
+            line-height: 14px;
+            span{
+                color: rgba(255, 255, 255, 0.6);
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 10px;
+            }
+        }
+        .card-name{
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            position: absolute;
+            bottom: 30px;
+            left: 20px;
+        }
+    }
+    .virtual-card-holder {
+        background: url("../images/virtual-card-bg.png") no-repeat;
+        background-size: contain;
+        width: 80%;
+        margin: 0 auto;
+        height: 190px;
+        position: relative;
+        z-index: 3;
+        .card-label{
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            color: #FFF;
+            font-size: 14px;
+            font-family:'OCR A Extended', Arial, sans-serif;
+            font-weight:normal;
+        }
+        .card-pan{
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            color: #fff;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: em(2);
+        }
+        .card-expiry{
+            position: absolute;
+            top: 90px;
+            left: 20px;
+            color: #fff;
+            font-size: 12px;
+            line-height: 14px;
+            span{
+                color: rgba(255, 255, 255, 0.6);
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 10px;
+            }
+        }
+        .card-cvv{
+            position: absolute;
+            top: 90px;
+            left: 150px;
+            color: #fff;
+            font-size: 12px;
+            line-height: 14px;
+            span{
+                color: rgba(255, 255, 255, 0.6);
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 10px;
+            }
+        }
+        .card-name{
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            position: absolute;
+            bottom: 30px;
+            left: 20px;
+        }
+    }
+    .debit-card-actions{
+        z-index: 2;
+        padding-top:70px;
+        margin-top: -100px;
+        ul{
+            list-style: none;
+            li{
+                border-top: 1px solid rgba(0, 0, 0, 0.03);
+                list-style: none;
+                padding: 15px 10%;
+                a{
+                    color: $themecolor;
+                    svg{
+                        padding-top:3px;
+                        background: red;
+                        height: 25px;
+                        width: 25px;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+.transactions{
+    border-bottom: 1px solid #F7F5F5;
+    .description-image{
+        float: left;
+    }
+    .transaction-title{
+        //display: inline;
+        float: left;
+        margin-left: 10px;
+        color:#464655;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    span{
+        color: #979797;
+        font-size: 12px;
+        line-height: 14px;
+        display: block;
+
+    }
+    .trans-amount{
+        font-weight: 500;
+        font-size: 14px;
+    }
+}
+/* Onboarding */
+.onboarding{
+    background: url("../images/main-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    margin: 0 !important;
+    display: table;
+    .middle {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .left-side{
+        background: url("../images/left-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        padding: 50px;
+        .intro{
+            position: absolute;
+            bottom: 100px;
+            color: #fff;
+            font-size: 36px;
+            line-height: 35px;
+            width: 80%;
+            padding: 20px;
+        }
+        .text{
+            position: absolute;
+            bottom: 40px;
+            color: #fff;
+            padding: 20px;
+            width: 80%;
+            font-size: 16px;
+        }
+    }
+    .right-side{
+        background: #fff;
+        padding: 50px;
+        a{
+            text-decoration: underline;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        label{
+            color: #454545 !important;
+            font-weight: 500;
+        }
+        .light-link{
+            color: #454545;
+            text-decoration: underline;
+            font-weight: normal;
+        }
+    }
+
+
+    .logo-caption{
+        color: $primary;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    h3{
+        margin-top: 10px;
+        color: #353535;
+        span {
+            display: block;
+            background: $primary;
+            width: 50px;
+            height: 3px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+    }
+    .left-fix{
+        background: #F9FAFC;
+        text-align: center;
+        padding: 100px 50px;
+        //height: 100vh;
+        .content{
+            width: 70%;
+            margin: 0 auto;
+            .intro{
+                width: 80%;
+                margin: 0 auto;
+                line-height: em(25);
+            }
+            .piggy{
+                max-width: 95%;
+                margin-top: 90px;
+            }
+        }
+    }
+    .right-fix{
+        background: #fff;
+        .form-holder{
+            margin: 80px 0;
+        }
+        a{
+            color: $primary;
+        }
+        .cta{
+            margin-top: 35px;
+            color: #464655;
+        }
+    }
+}
+label, .md-form label.active{
+    color: $primary !important;
+    font-size: 14px !important;
+}
+.nopadding{
+    padding: 0 !important;
+}
+.md-form{
+    margin: 30px 0;
+}
+input[type=email],
+input[type=text],
+input[type=number],
+input[type=password],
+input[type=tel],
+input[type=url],
+select,
+textarea{
+    border-bottom: 1px solid #BABABA !important;
+}
+
+input[type=email]:focus,
+input[type=text]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=tel]:focus,
+input[type=url]:focus,
+select:focus,
+textarea:focus{
+    border: 1px solid $primary !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+
+/*******************
+/*Top bar
+*******************/
+.topbar {
+    /*background: #eef5f9;*/
+    max-height: 50px;
+}
+
+.topbar .navbar-header {
+    background: rgb(92, 38, 130);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.topbar .top-navbar .navbar-header .navbar-brand .light-logo {
+    display: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.topbar .navbar-light .navbar-nav .nav-item > a.nav-link {
+    color: #241033 !important;
+}
+
+.topbar .navbar-light .navbar-nav .nav-item > a.nav-link:hover, .topbar .navbar-light .navbar-nav .nav-item > a.nav-link:focus {
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+/*******************
+/*General Elements
+*******************/
+a.link:hover, a.link:focus {
+    color: #241033 !important;
+}
+
+.bg-theme {
+    background-color: #ffffff !important;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+.right-sidebar .rpanel-title {
+    background: #ffffff;
+}
+
+.stylish-table tbody tr:hover, .stylish-table tbody tr.active {
+    border-left: 4px solid #ffffff;
+}
+
+.text-themecolor {
+    color: #241033 !important;
+}
+
+.profile-tab li a.nav-link.active,
+.customtab li a.nav-link.active {
+    border-bottom: 2px solid #5C2682;
+    color: #5C2682;
+}
+
+.profile-tab li a.nav-link:hover,
+.customtab li a.nav-link:hover {
+    color: #5C2682;
+}
+.form-material .form-control.focus, .form-material .form-control:focus{
+    background: none !important;
+}
+//.md-form .form-control{
+//    padding: .6rem .4rem;
+//}
+/*******************
+/*Buttons
+*******************/
+.waves-input-wrapper{
+    display: block;
+}
+.btn{
+    text-transform: none !important;
+    border-radius: 0.2rem !important;
+}
+.btn.btn-md{
+    font-size: 1em;
+}
+.btn-themecolor,
+.btn-themecolor.disabled {
+    background: #ffffff;
+    color: #ffffff;
+    border: 1px solid #241033;
+}
+
+.btn-themecolor:hover,
+.btn-themecolor.disabled:hover {
+    background: #ffffff;
+    opacity: 0.7;
+    border: 1px solid #241033;
+}
+
+.btn-themecolor.active, .btn-themecolor:focus,
+.btn-themecolor.disabled.active,
+.btn-themecolor.disabled:focus {
+    background: #ffffff;
+}
+.btn-outline-primary{
+    background: transparent;
+    background-color: transparent !important;
+    color: #fff !important;
+    border: 1px solid #fff !important;
+}
+/*******************
+/*sidebar navigation
+*******************/
+.label-themecolor {
+    background: #ffffff;
+}
+
+.sidebar-nav > ul > li.active > a {
+    color: #241033;
+    border-color: #ffffff;
+}
+
+.sidebar-nav > ul > li.active > a i {
+    color: #241033;
+}
+
+.sidebar-nav ul li a.active, .sidebar-nav ul li a:hover {
+    color: #fff;
+}
+
+.sidebar-nav ul li a.active i, .sidebar-nav ul li a:hover i {
+    color: #fff;
+}
+
+.card, .navbar {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.go-back{
+    a{
+        color: #464655;
+    }
+    a:hover{
+        color: $primary;
+    }
+    svg{
+        width: 20px;
+        height: 20px;
+    }
+}
+.bordered-bottom{
+    border-bottom: 1px solid #F4F4F4;
+    padding: 0 0 10px 0;
+}
+
+.fixed-header{
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 12px 0px;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    z-index: 10;
+}
+.register{
+    display: table;
+    width: 100%;
+    height: 95vh;
+    background: #FAFAFA;
+    h4{
+        color: #454545;
+        font-size: 30px;
+    }
+    .tag{
+        color: #828282;
+    }
+    .middle {
+        display: table-cell;
+        vertical-align: middle;
+        .container{
+            max-width: 550px;
+        }
+    }
+    .bullet{
+        font-size: em(10);
+        margin: 16px 2px;
+    }
+    .bullet.active{
+        color: #FF6E1F;
+    }
+    .bullet.inactive{
+        color: #D9D9D9;
+    }
+}
+.text-primary{
+    color: $primary !important;
+}
+/* innner pages */
+.content-header{
+    background: url("../images/background.png") no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 30px 0;
+    min-height: 300px;
+    max-height:350px;
+    ul.nav{
+        li>a{
+            color: #fff;
+            padding: 0 20px;
+        }
+    }
+}
+.content-body{
+    margin: 60px 0;
+    .card{
+        padding: 40px;
+        border: 1px solid #EFEFEF;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+    }
+    .bar-status{
+        background: linear-gradient(162.56deg, #1DA580 0%, #1E2488 111.71%);
+    }
+    .grad-card{
+        padding: 50px 20px 0 20px;
+        color: #fff !important;
+        background: linear-gradient(122.02deg, #1DA580 0%, #1E2488 111.71%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+    }
+    .card-sub-footer{
+        border-top: 1px solid #efefef;
+        background-color: #fff;
+        padding: 15px 50px;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+    }
+}
+
+/* forms override */
+label{
+    color: #7D7D7D !important;
+}
+
+
+/* footer */
+footer{
+    color: #454545;
+    padding: 25px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
